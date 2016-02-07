@@ -1,4 +1,4 @@
-function [ ] = dipha_output_bin_to_text( file )
+function [ ] = dipha_reformat_output( file )
 %INPUT: binary file containing persistence diagram output of DIPHA
 %OUTPUT: one text file for each homological dimension containing
 %the persistence diagram in format
@@ -32,22 +32,22 @@ end
 N=max(dims);
 
 %Initialise output files
-fileID=zeros(1,N);
+file_ids=zeros(1,N);
 for i=0:N
     filename=[file,'intervals_',num2str(i),'.txt'];
-    fileID(i+1)=fopen(filename,'w');
+    file_ids(i+1)=fopen(filename,'w');
 end
 
 %Write intervals to output files
 for i=1:m
   k=dims(i);
   interval=[num2str(births(i)),' ',num2str(deaths(i)),'\n'];
-  fprintf(fileID(k+1), interval);
+  fprintf(file_ids(k+1), interval);
 end
 
 %Close all files
 for i=0:N
-    fclose(fileID(i+1));
+    fclose(file_ids(i+1));
 end
 
 
