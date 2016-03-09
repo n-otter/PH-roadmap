@@ -1,6 +1,6 @@
 function [ output_args ] = dionysus_reformat_output( input-file, type )
 
-%This function converts the format of output files given by GUDHI.
+%This function converts the format of output files given by Dionysus.
 %
 %INPUT:
 %input-file: output text file given by dionysus  
