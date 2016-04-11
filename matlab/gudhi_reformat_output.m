@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 function [ output_args ] = gudhi_reformat_output( input_file )
+=======
+function [ output_args ] = gudhi_reformat_output( input-file )
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
 
 %This function converts the format of output files given by GUDHI.
 %
@@ -9,7 +13,11 @@ function [ output_args ] = gudhi_reformat_output( input_file )
 % Nina Otter, Oxford February 2016.
 
 %Load input file
+<<<<<<< HEAD
 diagram=load(input_file);
+=======
+diagram=load(input-file);
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
  
 %Maximum homology dimension
 i=max(diagram(:,2))
@@ -17,7 +25,11 @@ i=max(diagram(:,2))
 %Initialise output files
 file_ids=zeros(1,i+1);
 for j=1:i+1
+<<<<<<< HEAD
     filename=[input_file,'_',num2str(j-1),'.txt']
+=======
+    filename=[pdg,'_',num2str(j-1),'.txt']
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
     file_ids(j)=fopen(filename,'w');    
 end
 

@@ -9,13 +9,21 @@ function [] = plot_pdg( filename,header )
 intervals=load(filename);
 
 % Substitute inf with -1
+<<<<<<< HEAD
 intervals(intervals==inf)=-1;
+=======
+intervals(intervals==inf)=-1
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
 
 % Extract maximum death time encountered:
 maxd = max(intervals(:,2));
 minb=min(intervals(:,1));
 if (maxd < 0) 
+<<<<<<< HEAD
     maxd = max(A)+1;
+=======
+    maxd = max(A)+1
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
 end
 
 if (minb == maxd)
@@ -33,9 +41,15 @@ N=size(rows,1);
 h=figure;
 
 for i=1:N
+<<<<<<< HEAD
     a=rows(i,1);
     b=rows(i,2);
     m=50*occurrence(i);
+=======
+    a=rows(i,1)
+    b=rows(i,2)
+    m=50*occurrence(i)
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
     if b~=-1
         scatter(a,b,m,'filled','MarkerEdgeColor',[0.5 0 0.5],...
             'MarkerFaceColor',[0.5 0 0.5]);

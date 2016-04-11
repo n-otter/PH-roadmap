@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function [] = shortest_paths( filename )
 %Input: text file with each line storing a triple 'i j w_{i,j}'
 % where i and j are positive integers representing two nodes of the network
@@ -6,6 +7,12 @@ function [] = shortest_paths( filename )
 %
 
 %Nina Otter, Oxford.
+=======
+function [N,D] = shortest_paths( filename )
+%Input: weighted edge list text file 
+%Output: matrix with shortest distances between all nodes
+%and maximum non 
+>>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
 
 A=load(filename);
 H=[A(:,1);A(:,2)];
