@@ -1,5 +1,5 @@
-function [ ] = witness_javaPlex( filename, max_dimension,...
-    num_landmark_points, type, filtr_steps)
+function [ ] = lazy_witness_javaPlex( filename, max_dimension,...
+    num_landmark_points, type, nu,  filtr_steps)
 
 % This function computes PH with the witness complex calling javaPlex 
 % scripts.
@@ -17,6 +17,11 @@ function [ ] = witness_javaPlex( filename, max_dimension,...
 % type='random' the points are chosen at random
 % type='maxmin' the points are chosen using the sequential maxmin selector
 %
+% nu: this a natural number and is the parameter
+% for the construction of the lazy witness complex
+% see p. 19 of the tutorial at http://appliedtopology.github.io/javaplex/ 
+% for details
+%
 % filtr_steps: number of filtration steps. The initial filtration step is 
 % zero by default.
 %
@@ -25,9 +30,7 @@ function [ ] = witness_javaPlex( filename, max_dimension,...
 % homological dimension. These are the files ending with i_right_format.txt
 % where i=0,...,max_dimension indicates the homological dimension.
 
-
-% Nina Otter, Oxford September 2015. 
-
+% Nina Otter, Oxford September 2015.
 
 import edu.stanford.math.plex4.*;
 import java.util.*;
@@ -39,7 +42,7 @@ point_cloud=load(filename);
 % using minmax, depending if type='random' or type='maxmin'.
 if type=='random'
 landmark_selector = api.Plex4.createRandomSelector(point_cloud,...
-    num_landmark_points);
+    num_landmark_points)
 end
 
 if type=='maxmin'
@@ -48,14 +51,16 @@ landmark_selector = api.Plex4.createMaxMinSelector(point_cloud,...
 random_points = point_cloud(landmark_selector.getLandmarkPoints() + 1, :);
 end
 
-% We will compute the witness complex up to maximum distance R (see tutorial
-% at http://appliedtopology.github.io/javaplex/ for details)
-% 
+% We will compute the lazy witness complex up to maximum distance R 
+%(see tutorial at http://appliedtopology.github.io/javaplex/ for details)
+
 R = landmark_selector.getMaxDistanceFromPointsToLandmarks();
+max_filtration_value=R*2;
 
 % Create a witness stream
-stream = api.Plex4.createWitnessStream(landmark_selector, max_dimension, R,...
-filtr_steps);
+stream = streams.impl.LazyWitnessStream(landmark_selector.getUnderlyingMetricSpace(),...
+    landmark_selector, max_dimension, max_filtration_value, nu, filtr_steps);
+ stream.finalizeStream();
 
 % Size of filtered complex. Remove the semicolon to print out the size of the
 % complex.
@@ -66,12 +71,12 @@ stream.getSize();
 persistence = api.Plex4.getModularSimplicialAlgorithm(max_dimension, 2);
 
 % Compute the intervals
-intervals = persistence.computeIntervals(stream)
+intervals = persistence.computeIntervals(stream);
 
 
 % Save intervals to text file, one text file for each homological dimension
 for i=0:max_dimension
-    output_intervals=[filename,'_W_intervals','_',num2str(i),'.txt'];
+    output_intervals=[filename,'_LW_intervals','_',num2str(i),'.txt'];
     % Delete file in case it already exists, since diary appends output
     % at the end of existing files.
     delete(output_intervals);
@@ -86,9 +91,9 @@ end
 % b_0 b_1
 %
 for i=0:max_dimension
-    filename_old=[filename,'_W_intervals','_',num2str(i),'.txt'];
+    filename_old=[filename,'_LW_intervals','_',num2str(i),'.txt'];
     fileID=fopen(filename_old,'r');
-    filename_formatted=[filename,'_W_intervals','_',num2str(i),'_','right_format','.txt'];
+    filename_formatted=[filename,'_LW_intervals','_',num2str(i),'_','right_format','.txt'];
     fileID_formatted=fopen(filename_formatted,'w');
     line=fgetl(fileID); 
     while ischar(line)
@@ -109,7 +114,6 @@ for i=0:max_dimension
     fclose(fileID_formatted);
 end
 fclose(fileID);
-
 
 end
 

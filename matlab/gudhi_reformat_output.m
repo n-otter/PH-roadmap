@@ -1,4 +1,4 @@
-function [ output_args ] = gudhi_reformat_output( input-file )
+function [ output_args ] = gudhi_reformat_output( input_file )
 
 %This function converts the format of output files given by GUDHI.
 %
@@ -9,7 +9,7 @@ function [ output_args ] = gudhi_reformat_output( input-file )
 % Nina Otter, Oxford February 2016.
 
 %Load input file
-diagram=load(input-file);
+diagram=load(input_file);
  
 %Maximum homology dimension
 i=max(diagram(:,2))
@@ -17,7 +17,7 @@ i=max(diagram(:,2))
 %Initialise output files
 file_ids=zeros(1,i+1);
 for j=1:i+1
-    filename=[pdg,'_',num2str(j-1),'.txt']
+    filename=[input_file,'_',num2str(j-1),'.txt']
     file_ids(j)=fopen(filename,'w');    
 end
 
