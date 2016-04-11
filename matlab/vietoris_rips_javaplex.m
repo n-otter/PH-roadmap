@@ -1,6 +1,6 @@
 
 function []=vietoris_rips_javaplex(filename,max_dimension,max_filtration_value,...
-    number_steps,plot_name)
+    number_steps)
 
 % This function computes PH with the VR complex calling javaPlex scripts.
 
@@ -17,7 +17,6 @@ function []=vietoris_rips_javaplex(filename,max_dimension,max_filtration_value,.
 % number_steps: number of filtration steps. The initial filtration step is 
 % zero by default.
 
-% plot_name: this is the title for the barcode plot
 
 % Output: plot of barcodes, text file with intervals, one file for each
 % homological dimension. These are the files ending with i_right_format.txt
@@ -85,12 +84,5 @@ for i=0:max_dimension
     fclose(fileID_formatted);
 end
 fclose(fileID);
-
-
-%Create the barcode plot
-options.filename = plot_name;
-options.max_filtration_value = max_filtration_value;
-options.max_dimension = max_dimension - 1;
-plot_barcodes(intervals, options);
 
 end
