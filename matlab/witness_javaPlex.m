@@ -1,5 +1,5 @@
 function [ ] = witness_javaPlex( filename, max_dimension,...
-    num_landmark_points, type, filtr_steps,plot_name )
+    num_landmark_points, type, filtr_steps)
 
 % This function computes PH with the witness complex calling javaPlex 
 % scripts.
@@ -20,9 +20,8 @@ function [ ] = witness_javaPlex( filename, max_dimension,...
 % filtr_steps: number of filtration steps. The initial filtration step is 
 % zero by default.
 %
-% plot_name: this is the title for the barcode plot
 
-% Output: plot of barcodes, text file with intervals, one file for each
+% Output: text file with intervals, one file for each
 % homological dimension. These are the files ending with i_right_format.txt
 % where i=0,...,max_dimension indicates the homological dimension.
 
@@ -111,12 +110,6 @@ for i=0:max_dimension
 end
 fclose(fileID);
 
-
-% Create the barcode plots
-options.filename = plot_name;
-options.max_filtration_value = R;
-options.max_dimension = max_dimension - 1;
-plot_barcodes(intervals, options);
 
 end
 
