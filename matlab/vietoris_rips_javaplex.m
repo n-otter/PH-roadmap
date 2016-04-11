@@ -85,8 +85,4 @@ for i=0:max_dimension
 end
 fclose(fileID);
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 end
