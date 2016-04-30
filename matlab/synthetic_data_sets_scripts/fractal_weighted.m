@@ -120,7 +120,7 @@ for i=1:E
   fprintf(fileID_2,'%s\n',line);
 end
 
-fclose(fileID2);
+fclose(fileID_2);
 
 for i=1:N
 output_line=sprintf('%8.18f ', D(i,:));
