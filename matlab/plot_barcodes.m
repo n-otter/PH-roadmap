@@ -14,12 +14,12 @@ intervals(intervals==inf)=-1
 % Extract maximum death time encountered:
 maxd = max(intervals(:,2));
 minb=min(intervals(:,1));
+maxb=max(intervals(:,1));
 if (maxd < 0) 
-    maxd = max(A)+1
-end
-
-if (minb == maxd)
-    maxd = maxd+1;
+    maxd = maxd+maxd/5;
+elseif (maxd <= maxb)
+    maxd = maxb+maxb/5;
+else maxd=maxd+maxd/5;
 end
 
 %The following piece of code counts the number of times an interval occurrs
@@ -52,11 +52,13 @@ for i=1:N %loop over all intervals
             y=k*ones(1,S);
             plot(x,y,'b','LineWidth',5);
             hold on;
-            outside_1=plot([maxd+0.05,maxd-0.05],[k,k+0.4],'b','LineWidth',5);
+            epsilon1=m*maxd/200;
+            epsilon2=m*maxd/300;
+            outside_1=plot([maxd+epsilon1,maxd],[k,k+epsilon2],'b','LineWidth',5);
             hold on
-            outside_2=plot([maxd+0.05,maxd-0.05],[k,k-0.4],'b','LineWidth',5);
+            outside_2=plot([maxd+epsilon1,maxd],[k,k-epsilon2],'b','LineWidth',5);
             hold on
-            outside_3=plot([maxd,maxd+0.05],[k,k],'b','LineWidth',5);
+            outside_3=plot([maxd,maxd+epsilon1],[k,k],'b','LineWidth',5);
             hold on
             set(outside_1,'Clipping','off');
             set(outside_2,'Clipping','off');
