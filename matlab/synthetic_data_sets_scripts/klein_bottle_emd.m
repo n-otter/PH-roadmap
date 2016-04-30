@@ -1,10 +1,14 @@
-function [ output_args ] = klein_bottle_emb( N )
+function [ output_file_name_1,output_file_name_2 ] = klein_bottle_emb( N )
 
-% With this function you can sample N^2 points from the image
+% With this function one can sample N^2 points from the image
 % of the embedding of the Klein bottle in R^4
-% Input: N
-% Output: plot, .mat file with points and txt file with one point
-% per line
+% 
+% Input: number of points N
+
+% Output:
+% output_file_name_1: name of text file storing distance matrix
+% output_file_name_2: name of text file storing point cloud, with one point per line
+
 % Nina Otter, Oxford September 2015
 
 %If no input value is provided compute point cloud of size 100
@@ -38,12 +42,12 @@ t=r*sin(u)*sin(v/2);
 points=[x(:),y(:),z(:),t(:)];
 
 %Save point cloud to .mat file
-savefilename=['klein_bottle_emb',num2str(N^2),'.mat'];
-save(savefilename,'points', 'N' );
+output_file_name_1=['klein_bottle_emb',num2str(N^2),'.mat'];
+save(output_file_name_1,'points', 'N' );
 
 %Save point cloud to .txt file
-output_file_name=['klein_bottle_pointcloud_emb',num2str(N^2), '.txt'];
-fileID=fopen(output_file_name,'w');
+output_file_name_2=['klein_bottle_pointcloud_emb',num2str(N^2), '.txt'];
+fileID=fopen(output_file_name_2,'w');
 n=length(x(:));
 for i=1:n
 output_line=sprintf('%4.8f ', points(i,:));
