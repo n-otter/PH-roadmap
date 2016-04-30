@@ -1,4 +1,4 @@
-function [  ] = fractal_weighted( n,b,k,type)
+function [ output_file_name,output_file_name_2 ] = fractal_weighted( n,b,k,type)
 % Input:        n: total number of nodes of the graph is 2^n
 %               b: initial number of nodes is 2^b
 %               k: this is the connection density parameter.
@@ -6,7 +6,8 @@ function [  ] = fractal_weighted( n,b,k,type)
 %               this is either 'random', 'linear' or 'wh_one' (see 'A
 %               roadmap for the computation of persistent homology'
 %               for details).
-% Output:       text file with adjacency matrix, text file with edge list
+% Output:       output_file_name: name of text file with adjacency matrix
+%               output_file_name_2: name of text file with edge list
 
 % 
 % Nina Otter, Oxford 2015-2016.
