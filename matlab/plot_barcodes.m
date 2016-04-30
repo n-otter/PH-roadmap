@@ -1,6 +1,8 @@
 function [plot_name] = plot_barcodes( filename,header )
-% Input: text file with persistence diagram for
-% a given homological dimension, one birth death pair per line
+% Input: 
+% filename text file with persistence diagram for a given homological dimension, one birth death pair per line
+% header title for plot
+%
 % Output: pdf file with plot of barcodes
 %
 % Nina Otter, Oxford September 2015.
@@ -50,19 +52,20 @@ for i=1:N %loop over all intervals
         x=linspace(a,maxd,S)
         for k=j:m+j-1;
             y=k*ones(1,S);
-            plot(x,y,'b','LineWidth',5);
+            %plot(x,y,'b','LineWidth',5);
             hold on;
-            epsilon1=m*maxd/200;
-            epsilon2=m*maxd/300;
-            outside_1=plot([maxd+epsilon1,maxd],[k,k+epsilon2],'b','LineWidth',5);
+            %Set parameters for arrowheads, so that they scale with the axes of the plot
+            epsilon1=0.02*maxd;
+            epsilon2=0.02*sum(occurrence);
+            %Plot arrowheads 
+            v=[maxd k ; maxd-epsilon1 k-epsilon2; maxd+epsilon1 k; maxd-epsilon1 k+epsilon2];
+            f=[1 2 3 4];
+            outside_arrowhead=patch('Faces',f,'Vertices',v,'EdgeColor','b','FaceColor','b','LineWidth',3);
             hold on
-            outside_2=plot([maxd+epsilon1,maxd],[k,k-epsilon2],'b','LineWidth',5);
+            outside_line=plot([0,maxd+epsilon1],[k,k],'b','LineWidth',5);
             hold on
-            outside_3=plot([maxd,maxd+epsilon1],[k,k],'b','LineWidth',5);
-            hold on
-            set(outside_1,'Clipping','off');
-            set(outside_2,'Clipping','off');
-            set(outside_3,'Clipping','off');
+            set(outside_arrowhead,'Clipping','off');
+            set(outside_line,'Clipping','off');
         end
     end
  j=j+m;
