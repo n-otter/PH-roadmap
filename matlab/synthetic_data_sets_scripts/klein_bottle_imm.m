@@ -1,12 +1,17 @@
 
-function [output_file_name] = klein_bottle_imm(N)
-% With this function you can sample N^2 points from the image
-% of the figure eight immersion of the Klein bottle in R^3
-% Input: N
-% Output: plot, .mat file with points and txt file with one point
-% per line
+function [output_file_name_1,output_file_name_2] = klein_bottle_imm(N)
 
-% Nina Otter, Oxford September 2015.
+% With this function one can sample N^2 points from the image
+% of the immersion of the Klein bottle in R^3
+% 
+% Input: number of points N
+
+% Output:
+
+% output_file_name_1: name of text file storing distance matrix
+% output_file_name_2: name of text file storing point cloud, with one point per line
+
+% Nina Otter, Oxford September 2015
 
 %If no input value is provided compute point cloud of size 100
 if nargin < 1
@@ -37,24 +42,24 @@ x=(r+cos(u/2).*sin(v)-sin(u/2).*sin(2*v)).*cos(u);
 y=(r+cos(u/2).*sin(v)-sin(u/2).*sin(2*v)).*sin(u);
 z=sin(u/2).*sin(v)+cos(u/2).*sin(2*v);
 
-%Create plot for fun
-surf(x,z,y);
-axis square
-axis off
-grid off
-set(gca,'LooseInset',get(gca,'TightInset'))
+%Uncomment to create plot
+%surf(x,z,y);
+%axis square
+%axis off
+%grid off
+%set(gca,'LooseInset',get(gca,'TightInset'))
 
 
 %Point cloud
 points=[x(:),y(:),z(:)];
 
 %Save point cloud to .mat file
-savefilename=['klein_bottle_',num2str(N),'.mat'];
-save(savefilename,'points', 'N' );
+output_file_name_1=['klein_bottle_',num2str(N),'.mat'];
+save(output_file_name_1,'points', 'N' );
 
 %Save point cloud to text file
-output_file_name=['klein_bottle_pointcloud_',num2str(N^2), '.txt'];
-fileID=fopen(output_file_name,'w');
+output_file_name_2=['klein_bottle_pointcloud_',num2str(N^2), '.txt'];
+fileID=fopen(output_file_name_2,'w');
 n=length(x(:));
 for i=1:n
 output_line=sprintf('%4.8f ', points(i,:));
