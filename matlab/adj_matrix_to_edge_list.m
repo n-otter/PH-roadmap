@@ -1,10 +1,22 @@
 function [ output_args ] = adj_matrix_to_edge_list( D ,filename)
-%INPUT: adjacency matrix in .mat format
-%OUTPUT: weighted edge-list in .txt format
 
-%Nina Otter
-load(D);
-M=sen;
+%INPUT: adjacency matrix in .mat file
+%OUTPUT: name of text file storing a weighted edge-list
+
+%Nina Otter, Oxford, 2015.
+
+%Load .mat file 
+file=load(D);
+name_of_matrix_variable = fieldnames(file);
+k=size(name_of_matrix_variable);
+for i=1:k
+  A=file.(name_of_matrix_variable{i});
+  size(A)
+    if size(A)==size(A') %A is a matrix
+        M=A;
+    end
+end
+
 if issymmetric(M)
     T=triu(M);
 else
