@@ -34,6 +34,7 @@ function [ ] = lazy_witness_javaPlex( filename, max_dimension,...
 
 import edu.stanford.math.plex4.*;
 import java.util.*;
+warning('off','all')
 
 %Load input file
 point_cloud=load(filename);
