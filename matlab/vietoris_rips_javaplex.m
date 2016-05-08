@@ -34,7 +34,7 @@ filename = regexprep(filename,'.txt','');
 
 % Create a Vietoris-Rips stream 
 stream = api.Plex4.createVietorisRipsStream(point_cloud, max_dimension,...
-    max_filtration_value, number_steps)
+    max_filtration_value, number_steps);
 num_simplices = stream.getSize()
 
 
