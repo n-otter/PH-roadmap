@@ -53,7 +53,7 @@ z=sin(u/2).*sin(v)+cos(u/2).*sin(2*v);
 points=[x(:),y(:),z(:)];
 
 %Save point cloud to .mat file
-output_file_name_1=['klein_bottle_',num2str(N),'.mat'];
+output_file_name_1=['klein_bottle_',num2str(N^2),'.mat'];
 save(output_file_name_1,'points', 'N' );
 
 %Save point cloud to text file
