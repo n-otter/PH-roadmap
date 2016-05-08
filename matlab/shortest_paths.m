@@ -26,10 +26,9 @@ id=D==Inf;
 B=-1*ones(N);
 D(id)=B(id);
 
-M=max(max(D))
 C=M*100*ones(N);
 D(id)=C(id);
-output_file_name=[filename,'_maxdist_',num2str(M),'_SP_distmat.txt'];
+output_file_name=[filename,'_SP_distmat.txt'];
 fileID=fopen(output_file_name,'w');
 
 for i=1:N
