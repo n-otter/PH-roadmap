@@ -30,7 +30,7 @@ import edu.stanford.math.plex4.*;
 
 % Load the input file
 point_cloud = load(filename);
-
+filename = regexprep(filename,'.txt',''); 
 
 % Create a Vietoris-Rips stream 
 stream = api.Plex4.createVietorisRipsStream(point_cloud, max_dimension,...
