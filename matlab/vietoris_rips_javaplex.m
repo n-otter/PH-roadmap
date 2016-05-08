@@ -26,7 +26,7 @@ function []=vietoris_rips_javaplex(filename,max_dimension,max_filtration_value,.
 
 clc
 import edu.stanford.math.plex4.*;
-
+warning('off','all')
 
 % Load the input file
 point_cloud = load(filename);
