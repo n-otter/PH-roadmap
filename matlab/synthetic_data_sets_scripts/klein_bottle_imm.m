@@ -4,10 +4,9 @@ function [output_file_name_1,output_file_name_2] = klein_bottle_imm(N)
 % With this function one can sample N^2 points from the image
 % of the immersion of the Klein bottle in R^3
 % 
-% Input: number of points N
+% Input: number N
 
 % Output:
-
 % output_file_name_1: name of text file storing distance matrix
 % output_file_name_2: name of text file storing point cloud, with one point per line
 
