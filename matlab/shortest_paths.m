@@ -20,12 +20,13 @@ S=1./S;
 S=sparse(S);
 D=graphallshortestpaths(S,'Directed',false);
 
+
+% If some nodes have infinite distance, we define their distance as M*100, where 
+% M is the maximum distance value between all nodes having finite distance.
 id=D==Inf;
-
-
 B=-1*ones(N);
 D(id)=B(id);
-
+M=max(max(D));
 C=M*100*ones(N);
 D(id)=C(id);
 
