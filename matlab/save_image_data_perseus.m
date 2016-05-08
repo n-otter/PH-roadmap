@@ -15,7 +15,10 @@ function [  ] = save_image_data_perseus( M ,filename)
 
 fileID=fopen(filename,'w');
 
-M=M+1;
+m=min(min(min(M)));
+if m <=0
+M=M-m+1;
+end
 
 dimensions=size(M);
 d=length(dimensions);
