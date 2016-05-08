@@ -1,6 +1,9 @@
-function [ Y ] = distmat_to_pointcloud( filename )
+function [ output_file_name ] = distmat_to_pointcloud( filename )
 % Input: text file with distance matrix
-% Output: text file with point cloud, one point per line
+% Output: name of text file with point cloud, one point per line
+
+%Nina Otter, Oxford 2015.
+
 dist_matr=load(filename);
 
 N=size(dist_matr,1);
