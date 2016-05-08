@@ -6,13 +6,8 @@ function [output_file_name] = shortest_paths( filename )
 % and w_{i,j} is the weight of the edge connecting these nodes. 
 % Output: name of text file storing distance matrix.
 
-
 %Nina Otter, Oxford 2015.
 
-function [N,D] = shortest_paths( filename )
-%Input: weighted edge list text file 
-%Output: matrix with shortest distances between all nodes
-%and maximum non 
 
 A=load(filename);
 H=[A(:,1);A(:,2)];
