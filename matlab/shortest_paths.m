@@ -1,18 +1,18 @@
-<<<<<<< HEAD
-function [] = shortest_paths( filename )
-%Input: text file with each line storing a triple 'i j w_{i,j}'
-% where i and j are positive integers representing two nodes of the network
-%and w_{i,j} is the weight of the edge connecting these nodes. 
-%Output: text file storing matrix with shortest distances between all nodes
-%
+function [output_file_name] = shortest_paths( filename )
+% This function computes shortest path from a weighted network and saves the corresponding distance matrix.
 
-%Nina Otter, Oxford.
-=======
+% Input: text file with each line storing a triple 'i j w_{i,j}'
+% where i and j are positive integers representing two nodes of the network
+% and w_{i,j} is the weight of the edge connecting these nodes. 
+% Output: name of text file storing distance matrix.
+
+
+%Nina Otter, Oxford 2015.
+
 function [N,D] = shortest_paths( filename )
 %Input: weighted edge list text file 
 %Output: matrix with shortest distances between all nodes
 %and maximum non 
->>>>>>> eb56a33b5c8c4de15fb125fcfccd70a92503405d
 
 A=load(filename);
 H=[A(:,1);A(:,2)];
