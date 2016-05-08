@@ -28,6 +28,8 @@ D(id)=B(id);
 
 C=M*100*ones(N);
 D(id)=C(id);
+
+filename = regexprep(filename,'.txt',''); 
 output_file_name=[filename,'_SP_distmat.txt'];
 fileID=fopen(output_file_name,'w');
 
