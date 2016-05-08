@@ -46,7 +46,7 @@ intervals = persistence.computeIntervals(stream);
 
 % Save intervals to text file, one text file for each homological dimension
 for i=0:max_dimension
-    output_intervals=[filename,'intervals','_',num2str(i),'.txt'];
+    output_intervals=[filename,'_intervals','_',num2str(i),'.txt'];
     % Delete file in case it already exists, since diary appends output
     % at the end of existing files.
     delete(output_intervals);
@@ -61,9 +61,9 @@ end
 % b_0 b_1
 %
 for i=0:max_dimension
-    filename_old=[filename,'intervals','_',num2str(i),'.txt'];
+    filename_old=[filename,'_intervals','_',num2str(i),'.txt'];
     fileID=fopen(filename_old,'r');
-    filename_formatted=[filename,'intervals','_',num2str(i),'_','right_format','.txt'];
+    filename_formatted=[filename,'_intervals','_',num2str(i),'_','right_format','.txt'];
     fileID_formatted=fopen(filename_formatted,'w');
     line=fgetl(fileID); 
     while ischar(line)
