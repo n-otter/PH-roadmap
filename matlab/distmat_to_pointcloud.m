@@ -13,6 +13,7 @@ m=min(min(Y));
 size(Y,2)
 formatSpec='%8.25f %8.25f %8.25f\n';
 
+filename = regexprep(filename,'.txt',''); 
 output_file_name=[filename,'_point_cloud.txt']
 fileID=fopen(output_file_name,'w');
 for i=1:N
