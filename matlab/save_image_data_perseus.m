@@ -15,13 +15,20 @@ function [  ] = save_image_data_perseus( M ,filename)
 
 fileID=fopen(filename,'w');
 
-m=min(min(min(M)));
+dimensions=size(M);
+d=length(dimensions);
+% Find smallest entry in M
+m=M;
+for i=1:d
+m=min(m);
+end
+% If array contains non-positive integer values we rescale the interger values, 
+% since Perseus does not allow non-positive birth times
 if m <=0
 M=M-m+1;
 end
 
-dimensions=size(M);
-d=length(dimensions);
+
 N=1;
 
 fprintf(fileID, num2str(d));
