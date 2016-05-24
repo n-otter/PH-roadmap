@@ -25,7 +25,11 @@ if type=='dcech'
   input_file=regexprep(input_file,'.txt',''); 
   filename=[input_file,'_',num2str(i),'.txt']
   fileID2=fopen(filename,'w');
-  tline=fgetl(fileID);
+%   expr='^.*(\*)';
+%First 4 lines do not store intervals so we through them out
+for j=1:5  
+tline=fgetl(fileID);
+end
 
   while ischar(tline)
     if  length(tline)>1
