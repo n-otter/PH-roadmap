@@ -7,7 +7,8 @@ function [ output_args ] = dionysus_reformat_output( input_file, type )
 %type: indicates the input type, i.e.
 % 'dcech' for output of PH computation with the Cech complex 
 % 'alpha' for output of PH computation  with the alpha complex 
-% 'VR' for output of PH computation with Vietoris-Rips complex
+% 'VR' for output of PH computation with Vietoris-Rips complex and standard 
+% algorithm
 % 'dual' for output of PH computation with Vietoris-Rips complex and dual
 % algorithm
 
