@@ -10,6 +10,7 @@ function [plot_name] = plot_barcodes( filename,header )
 %Load file containing persistence diagram
 intervals=load(filename);
 filename=regexprep(filename,'.txt',''); 
+
 % Substitute inf with -1
 intervals(intervals==inf)=-1
 
