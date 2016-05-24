@@ -11,7 +11,7 @@ function [ output_args ] = gudhi_reformat_output( input_file )
 
 %Load input file
 diagram=load(input_file);
-
+input_file=regexprep(input_file,'.txt',''); 
  
 %Maximum homology dimension
 i=max(diagram(:,2))
