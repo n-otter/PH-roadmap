@@ -17,6 +17,7 @@ function [ ] = dipha_reformat_output( file )
 
 addpath('./DIPHA/')
 [dims,births, deaths]=load_persistence_diagram(file);
+file=regexprep(file,'.bin',''); 
 
 m=size(dims);
 % If an interval births(i) deaths(i) is infinite we redefine dims(i) as 
@@ -34,7 +35,7 @@ N=max(dims);
 %Initialise output files
 file_ids=zeros(1,N);
 for i=0:N
-    filename=[file,'intervals_',num2str(i),'.txt'];
+    filename=[file,'_intervals_',num2str(i),'.txt'];
     file_ids(i+1)=fopen(filename,'w');
 end
 
