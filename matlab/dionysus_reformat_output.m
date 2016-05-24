@@ -7,9 +7,9 @@ function [ output_args ] = dionysus_reformat_output( input_file, type )
 %type: indicates the input type, i.e.
 % 'dcech' for output of PH computation with the Cech complex 
 % 'alpha' for output of PH computation  with the alpha complex 
-% 'VR' for output of PH computation with Vietoris-Rips complex and standard 
+% 'VR-st' for output of PH computation with Vietoris-Rips complex and standard 
 % algorithm
-% 'dual' for output of PH computation with Vietoris-Rips complex and dual
+% 'VR-du' for output of PH computation with Vietoris-Rips complex and dual
 % algorithm
 
 %OUTPUT: one text file for each homological dimension with each line
@@ -35,7 +35,7 @@ if type=='dcech'
     elseif length(tline)==1
         i=i+1;  
         fclose(fileID2);
-        filename=[pdg,'_',num2str(i),'.txt']
+        filename=[input_file,'_',num2str(i),'.txt']
         fileID2=fopen(filename,'w');
     end
      tline=fgetl(fileID);
@@ -45,7 +45,7 @@ if type=='dcech'
 end
 
 
-if (type=='alpha' | type=='VR') | type=='dual'
+if (type=='alpha' | type=='VR-st') | type=='VR-du'
     diagram=load(input_file);
     input_file=regexprep(input_file,'.txt',''); 
     %Maximum homology dimension
