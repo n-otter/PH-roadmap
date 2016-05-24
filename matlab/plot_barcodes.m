@@ -44,12 +44,12 @@ for i=1:N %loop over all intervals
     for k=j:m+j-1;
     y=k*ones(1,S);
     plot(x,y,'b', 'LineWidth',5); 
+    box off
      axis([0 maxd 0 sum(occurrence)]);
      hold on;
     end
     hold on;
     else S=ceil(maxd-a)+2; %Now we plot the infinite intervals
-        maxd
         x=linspace(a,maxd,S)
         for k=j:m+j-1;
             y=k*ones(1,S);
