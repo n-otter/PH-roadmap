@@ -26,7 +26,8 @@ if type=='dcech'
   filename=[input_file,'_',num2str(i),'.txt']
   fileID2=fopen(filename,'w');
 %   expr='^.*(\*)';
-%First 4 lines do not store intervals so we through them out
+
+%First 4 lines do not store intervals so we throw them out
 for j=1:5  
 tline=fgetl(fileID);
 end
