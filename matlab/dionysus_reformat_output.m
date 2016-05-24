@@ -1,4 +1,4 @@
-function [ output_args ] = dionysus_reformat_output( input-file, type )
+function [ output_args ] = dionysus_reformat_output( input_file, type )
 
 %This function converts the format of output files given by Dionysus.
 %
@@ -18,10 +18,11 @@ function [ output_args ] = dionysus_reformat_output( input-file, type )
 
 
 if type=='dcech'
-  fileID=fopen(pdg,'r')
+  fileID=fopen(input_file,'r')
   tline=fgetl(fileID);
   i=0;
-  filename=[pdg,'_',num2str(i),'.txt']
+  input_file=regexprep(input_file,'.txt',''); 
+  filename=[input_file,'_',num2str(i),'.txt']
   fileID2=fopen(filename,'w');
   tline=fgetl(fileID);
 
@@ -44,12 +45,13 @@ end
 
 
 if (type=='alpha' | type=='VR') | type=='dual'
-    diagram=load(pdg);
+    diagram=load(input_file);
+    input_file=regexprep(input_file,'.txt',''); 
     %Maximum homology dimension
     i=max(diagram(:,1));
     file_ids=zeros(1,i+1);
     for j=1:i+1
-        filename=[pdg,'_',num2str(j-1),'.txt'];
+        filename=[input_file,'_',num2str(j-1),'.txt'];
         file_ids(j)=fopen(filename,'w');    
     end
     N=size(diagram,1);

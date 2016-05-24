@@ -9,7 +9,7 @@ function [plot_name] = plot_barcodes( filename,header )
 
 %Load file containing persistence diagram
 intervals=load(filename);
-
+filename=regexprep(filename,'.txt',''); 
 % Substitute inf with -1
 intervals(intervals==inf)=-1
 
@@ -77,7 +77,7 @@ title(header);
 xlabel('filtration step');
 
 %Save plot
-plot_name=[sprintf(filename) '.pdf'];
+plot_name=[sprintf(filename),'_barcodes','.pdf'];
 saveas(h, plot_name);
 
 end
