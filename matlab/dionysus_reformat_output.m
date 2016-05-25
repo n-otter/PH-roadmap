@@ -9,7 +9,7 @@ function [ output_args ] = dionysus_reformat_output( input_file, type )
 % 'alpha' for output of PH computation  with the alpha complex 
 % 'VR-st' for output of PH computation with Vietoris-Rips complex and standard 
 % algorithm
-% 'VR-du' for output of PH computation with Vietoris-Rips complex and dual
+% 'VR-co' for output of PH computation with Vietoris-Rips complex and dual
 % algorithm
 
 %OUTPUT: one text file for each homological dimension with each line
@@ -50,7 +50,7 @@ end
 end
 
 
-if (type=='alpha' | type=='VR-st') | type=='VR-du'
+if (type=='alpha' | type=='VR-st') | type=='VR-co'
     diagram=load(input_file);
     input_file=regexprep(input_file,'.txt',''); 
     %Maximum homology dimension
