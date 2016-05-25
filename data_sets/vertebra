@@ -1,5 +1,5 @@
 Due to space reasons we do not make our processed version of this data set available on github.
-This is the Nead Aneurysm data set from the Volvis repository (http://volvis.org).
+This is the Head Aneurysm data set from the Volvis repository (http://volvis.org).
 The .raw file can be read into MATLAB with the following commands:
 
 >> fileID=fopen('vertebra16.raw','r');
@@ -14,4 +14,5 @@ and for PERSEUS with the following command:
 
 >>  save_image_data_perseus(B,'vertebra.txt');
 
-where the script save_image_data.m was provided by the developers of DIPHA, while we provide the script save_image_data_perseus.m (see also the accompanying tutorial).
+where the script save_image_data.m was provided by the developers of DIPHA, 
+while we provide the script save_image_data_perseus.m (see also the accompanying tutorial).
