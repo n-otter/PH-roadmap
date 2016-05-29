@@ -12,7 +12,7 @@ This project was created to host data sets and scripts used in the paper <a href
 
 
 <h3> Software for PH </h3>
-
+In the following you can find all libraries to compute PH that I know of. If you know a package that is not listed here, please contact me. I was inspired to write this list by Felsenstein's comprehensive  <a href="http://evolution.genetics.washington.edu/phylip/software.html">list of phylogeny programs</a>.
 
 <table align="center" border="0" cellpadding="10" cellspacing="2" width="100%">
 <tr bgcolor="#E5EAED">
