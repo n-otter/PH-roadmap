@@ -1,12 +1,12 @@
 # PH-roadmap
 
-# Project founder:
+<h3> Project founder: </h3>
 
 Nina Otter (For contact information, see <a href="http://people.maths.ox.ac.uk/otter/"> here </a>.)
 
-# Description
+<h3> Description </h3>
 
-This project was created to host data sets and scripts used in the paper [1] and the supplementary information.
+This project was created to host data sets and scripts used in the paper <a href="#roadmap">[1]</a> and the accompanying supplementary information.
 
 
 
@@ -202,5 +202,5 @@ Finally some more libraries:
 <a name="statistics">&nbsp;</a><br>
 <h3> Statistical tools </h3>
 
-# References
-[1] A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
+<h3> References </h3>
+<a name="roadmap">&nbsp;</a><br> A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
