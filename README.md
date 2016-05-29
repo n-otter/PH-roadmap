@@ -16,6 +16,20 @@ This project was created to host data sets and scripts used in the paper [1] and
 
 # Software for PH
 
+<p>
+<table align="center" border="0" cellpadding="10" cellspacing="2" width="100%">
+<tr bgcolor="#E5EAED">
+<td align="center" valign="middle" width="20%"><a href="#intro">Preprints and recent publications</a></td>
+<td align="center" valign="middle" width="20%"><a href="#complexes">Talks</a></td>
+<td align="center" valign="middle" width="20%"><a href="#language">Teaching</a></td>
+<td align="center" valign="middle" width="20%"><a href="#statistics">Useful stuff</a></td>
+</tr>
+</table>
+&nbsp;<br>
+
+
+<a name="intro">&nbsp;</a><br>
+<h3> Brief Introduction </h3>
 
 If you are new to the computation of persistent homology a good idea is to start with javaPlex, which is the new library of the Plex family:
 
@@ -177,10 +191,14 @@ Finally some more libraries:
 </ul>
 
 
+<a name="complexes">&nbsp;</a><br>
+<h3> By complexes </h3>
 
+<a name="language">&nbsp;</a><br>
+<h3> By language </h3>
 
-
-
+<a name="statistics">&nbsp;</a><br>
+<h3> Statistical tools </h3>
 
 # References
 [1] A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
