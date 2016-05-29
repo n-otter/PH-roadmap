@@ -22,9 +22,6 @@ This project was created to host data sets and scripts used in the paper <a href
 <td align="center" valign="middle" width="20%"><a href="#statistics">Statistical tools</a></td>
 </tr>
 </table>
-&nbsp;<br>
-
-
 
 
 <a name="intro">&nbsp;</a><br>
@@ -192,12 +189,12 @@ Finally some more libraries:
 
 <a name="complexes">&nbsp;</a><br>
 <h3> By complexes </h3>
-
+..to be added soon
 <a name="language">&nbsp;</a><br>
 <h3> By language </h3>
-
+..to be added soon
 <a name="statistics">&nbsp;</a><br>
 <h3> Statistical tools </h3>
-
+..to be added soon
 <h3> References </h3>
 <a name="roadmap">[1]</a> A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
