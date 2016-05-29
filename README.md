@@ -19,9 +19,9 @@ This project was created to host data sets and scripts used in the paper [1] and
 <p>
 
 
-<td align="center" valign="middle" width="20%"><a href="#intro">Brief introduction</a></td> &nbsp;
-<td align="center" valign="middle" width="20%"><a href="#complexes">By complexes</a></td> &nbsp;
-<td align="center" valign="middle" width="20%"><a href="#language">By language</a></td> &nbsp;
+<td align="center" valign="middle" width="20%"><a href="#intro">Brief introduction</a></td> &nbsp;&nbsp;
+<td align="center" valign="middle" width="20%"><a href="#complexes">By complexes</a></td> &nbsp;&nbsp;
+<td align="center" valign="middle" width="20%"><a href="#language">By language</a></td> &nbsp;&nbsp;
 <td align="center" valign="middle" width="20%"><a href="#statistics">Statistical tools</a></td>
 
 
