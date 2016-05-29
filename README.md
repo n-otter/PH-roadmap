@@ -16,7 +16,7 @@ This project was created to host data sets and scripts used in the paper [1] and
 
 # Software for PH
 
-<ul>
+
 
 <p><b> Vietoris-Rips </b></p>
 
@@ -92,7 +92,7 @@ A module for the <a href="https://www-fourier.ujf-grenoble.fr/~sergerar/Kenzo/">
 
 <li>
 <a href="http://kurlin.org/projects/persistent-skeletons.php"> HOPES</a>
-</ul>
+
 
 
 
