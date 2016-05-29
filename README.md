@@ -203,4 +203,4 @@ Finally some more libraries:
 <h3> Statistical tools </h3>
 
 <h3> References </h3>
-<a name="roadmap">&nbsp;</a><br> A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
+<a name="roadmap">[1]</a><br> A roadmap for the computation of persistent homology. N. Otter, M. Porter, U. Tillmann, P. Grindrod, H. Harrington
