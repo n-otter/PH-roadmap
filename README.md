@@ -18,7 +18,7 @@ This project was created to host data sets and scripts used in the paper [1] and
 
 <ul>
 
-<h2> Vietoris-Rips </h2>
+<p><b> Vietoris-Rips </b></p>
 
 <p>
 <li>
