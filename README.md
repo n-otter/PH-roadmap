@@ -65,7 +65,7 @@ If you are familiar with R you might want to try out these two libraries:
 
 <p>
 <li>
-<a href="https://cran.r-project.org/web/packages/TDA/"> TDA</a>
+<a href="https://cran.r-project.org/web/packages/TDA/"> TDA</a> See <a href="tda package tutorial"> here</a> for the accompanying tutorial. This library implements many tools for the statistical interpretation of the computation of PH.
 
 
 </ul>
