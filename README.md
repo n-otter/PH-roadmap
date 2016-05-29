@@ -17,15 +17,13 @@ This project was created to host data sets and scripts used in the paper [1] and
 # Software for PH
 
 <p>
-<table align="center" border="0" cellpadding="10" cellspacing="2" width="100%">
-<tr bgcolor="#E5EAED">
+
+
 <td align="center" valign="middle" width="20%"><a href="#intro">Brief introduction</a></td>
 <td align="center" valign="middle" width="20%"><a href="#complexes">By complexes</a></td>
 <td align="center" valign="middle" width="20%"><a href="#language">By language</a></td>
 <td align="center" valign="middle" width="20%"><a href="#statistics">Statistical tools</a></td>
-</tr>
-</table>
-&nbsp;<br>
+
 
 
 <a name="intro">&nbsp;</a><br>
