@@ -11,12 +11,9 @@ This project was created to host data sets and scripts used in the paper <a href
 
 
 
+<h3> Software for PH </h3>
 
 
-
-# Software for PH
-
-<p>
 <table align="center" border="0" cellpadding="10" cellspacing="2" width="100%">
 <tr bgcolor="#E5EAED">
 <td align="center" valign="middle" width="20%"><a href="#intro">Brief introduction</a></td> &nbsp;&nbsp;
