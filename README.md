@@ -93,7 +93,7 @@ Another powerful software is this:
 </ul>
 
 
-This is the only software to implement, among other things, the computation of PH with &#268;ech and alpha complexes, and vineyards:
+This is the only software to implement, among other things, the computation of PH with the &#268;ech complex, and vineyards:
 
 <ul>
 <p>
@@ -113,7 +113,9 @@ This is the only software to implement, among other things, the computation of P
 <p>
 
 The following is a module for the <a href="https://www-fourier.ujf-grenoble.fr/~sergerar/Kenzo/">Kenzo</a> library which implements computation of PH in a more general setting, i.e. with integer coefficients and for infinite spaces (provided their homology is <a href="https://www-fourier.ujf-grenoble.fr/~sergerar/Papers/Constructive-AT.pdf">effective</a>):
-
+<ul>
+<p>
+<li>
  <a href="http://www.unirioja.es/cu/anromero/persistent-homology.zip"> Kenzo module for PH</a> (see the companion <a href="http://arxiv.org/pdf/1403.7086v2.pdf"> preprint</a> for instructions)
 </ul>
 
@@ -174,72 +176,6 @@ Finally some more libraries:
 <a href="http://kurlin.org/projects/persistent-skeletons.php"> HOPES</a>
 </ul>
 
-<p><b> Vietoris-Rips </b></p>
-
-<p>
-<li>
-<a href="http://appliedtopology.github.io/javaplex/"> javaPlex</a>
-
-<p>
-<li>
-<a href="http://www.sas.upenn.edu/~vnanda/perseus/"> Perseus</a>
-
-<p>
-<li>
-<a href="http://rpackages.ianhowson.com/cran/phom/man/phom-package.html"> pHom</a>
-
-<p>
-<li>
-<a href="https://cran.r-project.org/web/packages/TDA/"> TDA</a>
-
-<p>
-
-<li>
-<a href="http://www-circa.mcs.st-and.ac.uk/~mik/persistence/"> GAP Persistence</a>
-
-</p>
-
-<li>
-<a href="https://code.google.com/p/phat/"> PHAT</a>
-
-<p>
-<li>
-<a href="https://code.google.com/p/dipha/"> DIPHA</a>
-
-<p>
-<li>
-<a href="https://project.inria.fr/gudhi/software/"> GUDHI</a>
-
-<p>
-<li>
-<a href="http://www.mrzv.org/software/dionysus/"> Dionysus</a>
-
-<p>
-<li>
-<a href="http://ctl.appliedtopology.org/">CTL</a>
-
-<p> 
-<li>
-A module for the <a href="https://www-fourier.ujf-grenoble.fr/~sergerar/Kenzo/">Kenzo</a> library which implements computation of PH in a more general setting, i.e. with integer coefficients and for infinite spaces (provided their homology is <a href="https://www-fourier.ujf-grenoble.fr/~sergerar/Papers/Constructive-AT.pdf">effective</a>):
-
- <a href="http://www.unirioja.es/cu/anromero/persistent-homology.zip"> Kenzo module for PH</a> (see the companion <a href="http://arxiv.org/pdf/1403.7086v2.pdf"> preprint</a> for instructions)
-
-<p>
-<li>
-<a href="https://www.math.upenn.edu/~dlotko/persistenceLandscape.html"> The Persistence Landscape Toolbox</a>
-</p>
-<p>
-<li>
-<a href="http://web.cse.ohio-state.edu/~tamaldey/SimpPers/SimpPers-software/"> SimpPers</a>
-</p>
-
-<p>
-<li>
-<a href="http://cuda.unicam.it/jHoles"> jHoles</a>
-</p>
-
-<li>
-<a href="http://kurlin.org/projects/persistent-skeletons.php"> HOPES</a>
 
 
 
