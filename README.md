@@ -2,7 +2,7 @@
 
 <h3> Project founder: </h3>
 
-Nina Otter (For contact information, see <a href="http://people.maths.ox.ac.uk/otter/"> here </a>.)
+Nina Otter (For contact information, see <a href="http://people.maths.ox.ac.uk/otter/"> here</a>.)
 
 <h3> Description </h3>
 
