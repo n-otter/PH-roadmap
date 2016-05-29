@@ -14,9 +14,11 @@ This project was created to host data sets and scripts used in the paper [1] and
 
 
 
-# List of software for PH
+# Software for PH
 
 <ul>
+
+<h1> Vietoris-Rips </h1>
 
 <p>
 <li>
