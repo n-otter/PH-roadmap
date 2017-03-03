@@ -1,10 +1,11 @@
-function [ distance ] = bottleneck_dionysus( pdg1,pdg2 )
-%This function computes the bottleneck distance using the implementation
-%in Dionysus.
+function [  ] = bottleneck_dionysus( pdg1,pdg2 )
+%This function prepares files for the computation of the bottleneck distance 
+%using the implementation in Dionysus.
 
 %Input: two text files with persistence diagrams in the right format.
 
-%Output: bottleneck distance.
+%The files are saved to the text files 'diagram1.txt' and 'diagram2.txt'
+
 
 %Nina Otter, Oxford September 2015.
 
@@ -61,9 +62,6 @@ end
  end
  fclose(fileID2);
  
- %Compute bottleneck distance
- 
- system('./bottleneck-distance diagram1.txt diagram2.txt');
 
 end
 
