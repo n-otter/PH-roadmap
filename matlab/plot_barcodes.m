@@ -14,16 +14,14 @@ filename=regexprep(filename,'.txt','');
 % Substitute inf with -1
 intervals(intervals==inf)=-1
 
-% Extract maximum death time encountered:
+% Extract maximum and death and birth time encountered:
 maxd = max(intervals(:,2));
 minb=min(intervals(:,1));
 maxb=max(intervals(:,1));
 if (maxd < 0) 
-    maxd = maxd+maxd/5;
-elseif (maxd <= maxb)
-    maxd = maxb+maxb/5;
-else maxd=maxd+maxd/5;
+    maxd = maxb+1;
 end
+
 
 %The following piece of code counts the number of times an interval occurrs
 [rows,indices,indices]=unique(intervals,'rows');
