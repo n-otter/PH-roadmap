@@ -8,16 +8,17 @@ function [] = plot_pdg( filename,header )
 %Load file containing persistence diagram
 intervals=load(filename);
 filename=regexprep(filename,'.txt',''); 
-% Substitute inf with -1
 
+% Substitute inf with -1
 intervals(intervals==inf)=-1;
 
 
-% Extract maximum death time encountered:
+% Extract maximum and minimum death time encountered:
 maxd = max(intervals(:,2));
 minb=min(intervals(:,1));
+maxb=max(intervals(:,1));
 if (maxd < 0) 
-    maxd = max(A)+1;
+    maxd = maxb+1;
 end
 
 if (minb == maxd)
