@@ -6,7 +6,7 @@ Nina Otter (For contact information, see <a href="http://people.maths.ox.ac.uk/o
 
 <h3> Description </h3>
 
-This project was created to host data sets and scripts used in the paper <a href="#roadmap">[1]</a> and the accompanying supplementary information.
+This project was created to host data sets and scripts used in the paper <a href="#roadmap">[1]</a> and the accompanying supplementary information. The paper can be found <a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-017-0109-5"> here</a>. The accompanying <a href="https://static-content.springer.com/esm/art%3A10.1140%2Fepjds%2Fs13688-017-0109-5/MediaObjects/13688_2017_109_MOESM2_ESM.pdf"> tutorial</a> explains how to download/install the libraries Dionyus, DIPHA, GUDHI, javaPlex, Hera, jHoles, Perseus and Ripser, how to compute persistent homology for weighted networks, point clouds as well as digital images, how to plot barcodes and persistence diagrams obtained with these libraries, as well as how to compute bottleneck and Wasserstein distances. 
 
 
 
