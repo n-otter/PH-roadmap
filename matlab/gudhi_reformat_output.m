@@ -37,7 +37,7 @@ for r=1:N
    else 
    fprintf(file_ids(l),'%4.4f', line_1);
    fprintf(file_ids(l),' ');
-   fprintf(file_ids(l),'%s\n', 'inf');
+   fprintf(file_ids(l),'%s\n', '-1');
    end
 end
 
