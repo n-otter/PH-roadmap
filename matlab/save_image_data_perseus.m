@@ -13,7 +13,7 @@ function [  ] = save_image_data_perseus( M ,filename)
 % Nina Otter, Oxford April 2016
 
 
-fileID=fopen(filename,'w');
+fileID=fopen(filename,'W');
 
 dimensions=size(M);
 d=length(dimensions);
@@ -22,7 +22,7 @@ m=M;
 for i=1:d
 m=min(m);
 end
-% If array contains non-positive integer values we rescale the interger values, 
+% If array contains non-positive integer values we rescale the integer values, 
 % since Perseus does not allow non-positive birth times
 if m <=0
 M=M-m+1;
